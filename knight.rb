@@ -105,7 +105,7 @@ class Knight
     return prev
   end
 
-  #starts at ending and works its way back to the start along a path
+  #starts at ending and works its way back to the start along shortest path
   def reconstruct_path(pos_start, pos_end, prev)
     path = []
     at = find_node_by_position(pos_end)
