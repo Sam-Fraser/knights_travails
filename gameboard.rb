@@ -10,14 +10,19 @@ class GameBoard
   #checks if a move is valid
   def valid_move?(pos_arr)
     #makes sure no other piece occupies space
-    if @board[pos_arr[0]][pos_arr[1]]
-      false
+    #if @board[pos_arr[0]][pos_arr[1]]
+      #false
     #makes sure the space is within the game board  
-    elsif pos_arr[0] > 7 || pos_arr[0] < 0 || pos_arr[1] > 7 || pos_arr[1] < 0
+    if pos_arr[0] > 7 || pos_arr[0] < 0 || pos_arr[1] > 7 || pos_arr[1] < 0
       false
     else
       true
     end
+  end
+
+  #returns number of spaces on gameboard
+  def size
+    @board.flatten.length
   end
 
 end
